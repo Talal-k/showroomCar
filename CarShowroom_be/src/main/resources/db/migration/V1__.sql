@@ -40,3 +40,20 @@ ALTER TABLE showroom
 
 ALTER TABLE car
     ADD CONSTRAINT FK_CAR_ON_SHOWROOM FOREIGN KEY (showroom_id) REFERENCES showroom (id);
+
+INSERT INTO c_user (full_name, username, password)
+VALUES
+    ('Talal', 'talal', 'password456');
+
+INSERT INTO showroom (id, name, commercial_registration_number, manager_name, contact_number, address, is_delete)
+VALUES
+    (nextval('showroom_seq'), 'Best Cars', 1001, 'Alice Johnson', 1234567890, '123 Elm Street, Springfield', FALSE),
+    (nextval('showroom_seq'), 'Luxury Motors', 1002, 'Bob Brown', 2345678901, '456 Oak Avenue, Springfield', FALSE);
+
+-- Insert initial cars with references to the inserted showrooms
+INSERT INTO car (id, vin, maker, model, model_year, price, showroom_id)
+VALUES
+    (nextval('car_seq'), '1HGCM82633A123456', 'Honda', 'Accord', 2020, 25000.00, (SELECT id FROM showroom WHERE name = 'Best Cars')),
+    (nextval('car_seq'), '1FTFW1EF1EFC12345', 'Ford', 'F-150', 2019, 30000.00, (SELECT id FROM showroom WHERE name = 'Best Cars')),
+    (nextval('car_seq'), '1HGCR2F33HA123456', 'Honda', 'Civic', 2021, 22000.00, (SELECT id FROM showroom WHERE name = 'Luxury Motors')),
+    (nextval('car_seq'), '1C4RJFAG5JC123456', 'Jeep', 'Grand Cherokee', 2022, 45000.00, (SELECT id FROM showroom WHERE name = 'Luxury Motors'));
