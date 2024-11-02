@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <form [formGroup]="signUpForm" (ngSubmit)="onsubmit()">
+        <div>
+            <h1>Sign Up</h1>
+
+            <div class="input-box">
+                <input type="text" formControlName="fullName" placeholder="Full Name" required>
+                <i class='bx bx-envelope'></i>
+                <!-- <div *ngIf="signUpForm.get('fullName').inValid" class="error-message">
+                    Full name is required.
+                </div> -->
+            </div>
+
+            <div class="input-box">
+                <input type="text" formControlName="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+                <!-- <div *ngIf="signUpForm.controls.username.invalid && signUpForm.controls.username.touched" class="error-message">
+                    Username is required.
+                </div> -->
+            </div>
+
+            <div class="input-box">
+                <input type="password" formControlName="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+                <!-- <div *ngIf="signUpForm.controls.password.invalid && signUpForm.controls.password.touched" class="error-message">
+                    Password must be at least 6 characters long.
+                </div> -->
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+            <div class="register-link">
+                <p>Don't have an account?
+                    <a class="link-button" (click)="navigateToSignIn()">Register</a>
+                </p>
+            </div> 
+        </div>
+    </form>
+</div>

@@ -1,0 +1,94 @@
+<div class="showroom-container" *ngIf="!saveMode">
+    <h2>{{ selectedShowRoom ? 'Cars' : 'Car Showroom' }}</h2>
+  
+    <!-- Search Input -->
+    <div *ngIf="!selectedShowRoom">
+      <input 
+        type="text" 
+        placeholder="Search by commercialRegistrationNumber" 
+        [(ngModel)]="searchId" 
+        (input)="searchById()" 
+        class="search-input" 
+      />
+      <button (click)="cancelSearch()" class="cancel-search-btn">Cancel</button>
+      <button class="add-showroom-btn" (click)="addShowroom()">Add Showroom</button>
+    </div>
+  
+    <!-- Showrooms List -->
+    <div class="card-container" *ngIf="!selectedShowRoom">
+      <div 
+        class="card" 
+        *ngFor="let showroom of showrooms" 
+        (click)="selectShowroom(showroom)">
+        
+        <div class="card-header">
+          <h3>{{ showroom.name }}</h3>
+          <div class="card-actions">
+            <button (click)="editShowroom(showroom); $event.stopPropagation()">Edit</button>
+            <button (click)="deleteShowroom(showroom.id); $event.stopPropagation()">Delete</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <p><strong>Registration No:</strong> {{ showroom.commercialRegistrationNumber }}</p>
+          <p><strong>Manager:</strong> {{ showroom.managerName }}</p>
+          <p><strong>Contact:</strong> {{ showroom.contactNumber }}</p>
+          <p><strong>Address:</strong> {{ showroom.address }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Car Section for Selected Showroom -->
+    <div *ngIf="selectedShowRoom">
+      <button (click)="returnToShowrooms()" class="return-showroom-btn">Return to Showrooms</button>
+  
+      <div class="car-search">
+        <input 
+          type="text" 
+          placeholder="Search by Maker" 
+          [(ngModel)]="carMakerSearch" 
+          (input)="searchCars()" 
+          class="search-input"
+        />
+        <input 
+          type="text" 
+          placeholder="Search by Showroom Name" 
+          [(ngModel)]="carShowroomNameSearch" 
+          (input)="searchCars()" 
+          class="search-input"
+        />
+      </div>
+  
+      <div class="car-container">
+        <div class="car-card" *ngFor="let car of cars">
+          <p><strong>Vin:</strong> {{ car.vin }}</p>
+          <p><strong>Maker:</strong> {{ car.maker }}</p>
+          <p><strong>Model:</strong> {{ car.model }}</p>
+          <p><strong>Year:</strong> {{ car.modelYear }}</p>
+          <p><strong>Price:</strong> {{ car.price }}</p>
+        </div>
+      </div>
+  
+      <!-- Showroom Pagination -->
+      <div class="pagination-controls" *ngIf="!selectedShowRoom">
+        <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 0">Previous</button>
+        <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+        <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages - 1">Next</button>
+      </div>
+  
+      <!-- Car Pagination -->
+      <div class="pagination" *ngIf="totalCarPages > 1 && selectedShowRoom">
+        <button (click)="changeCarPage(currentCarPage - 1)" [disabled]="currentCarPage === 0">Previous</button>
+        <span>Page {{ currentCarPage + 1 }} of {{ totalCarPages }}</span>
+        <button (click)="changeCarPage(currentCarPage + 1)" [disabled]="currentCarPage >= totalCarPages - 1">Next</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Showroom Form -->
+  <app-showroom-form 
+    *ngIf="saveMode" 
+    [showroom]="selectedShowRoom" 
+    (flip)="flip()" 
+    [isUpdate]="isUpdate">
+  </app-showroom-form>
+  
