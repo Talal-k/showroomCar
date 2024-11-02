@@ -1,29 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="504fe2c7-3238-4942-b56e-dc29feef2e80" name="Changes" comment="" />
+    <list default="true" id="b8c54012-7a08-4505-bd01-8c196232e572" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
-  <component name="ProjectId" id="2o70zhkqNRntw8LdTpP1K1niZAP" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.intellij.jpb.NewClass" />
+        <option value="com.intellij.jpb.JpaEntity" />
+        <option value="com.intellij.jpb.JpaRepository" />
+        <option value="Interface" />
+        <option value="com.intellij.jpb.FlywayMigrationScript" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2o71GcDOu779zKI79Emg09UNX7W" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DtoCreateDialog.EQUALS_HASH_CODE_INITIAL_PROP_KEY": "false",
+    "DtoCreateDialog.TO_STRING_INITIAL_PROP_KEY": "false",
+    "Maven.CarShowroom [clean,compile,package...].executor": "Run",
+    "Maven.CarShowroom [clean,compile,package].executor": "Run",
+    "Maven.CarShowroom [clean,compile].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.CarShowroomApplication.executor": "Debug",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/WinDows/Desktop/Elm challenge/CarShowroom",
+    "last_opened_file_path": "C:/Users/WinDows/Desktop/CarShowroom/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\WinDows\Desktop\CarShowroom\src\main\resources" />
+      <recent name="C:\Users\WinDows\Desktop\CarShowroom\src\main\java\com\example\carshowroom\security" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.carshowroom.security" />
+      <recent name="com.example.carshowroom.filter" />
+      <recent name="com.example.carshowroom.dto" />
+      <recent name="com.example.carshowroom.serviceImpl" />
+      <recent name="com.example.carshowroom.model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CarShowroomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="CarShowroom" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.carshowroom.CarShowroomApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -35,12 +105,15 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="504fe2c7-3238-4942-b56e-dc29feef2e80" name="Changes" comment="" />
-      <created>1730205570931</created>
+      <changelist id="b8c54012-7a08-4505-bd01-8c196232e572" name="Changes" comment="" />
+      <created>1730205710406</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1730205570931</updated>
-      <workItem from="1730205572018" duration="137000" />
+      <updated>1730205710406</updated>
+      <workItem from="1730205711502" duration="11248000" />
+      <workItem from="1730301343060" duration="1530000" />
+      <workItem from="1730306911836" duration="8579000" />
+      <workItem from="1730482296442" duration="15802000" />
     </task>
     <servers />
   </component>
